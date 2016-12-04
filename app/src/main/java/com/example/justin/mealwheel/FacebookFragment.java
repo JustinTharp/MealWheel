@@ -39,7 +39,7 @@ public class FacebookFragment extends Fragment {
             Profile profile = Profile.getCurrentProfile();
             if (profile != null)
             {
-                welcomeMessage.setText("Time To Spin the Wheel" + profile.getFirstName());
+                welcomeMessage.setText("Time To Spin the Wheel" + profile.getFirstName()+"!");
             }
 
         }
