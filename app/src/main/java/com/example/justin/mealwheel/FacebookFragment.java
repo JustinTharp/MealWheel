@@ -23,13 +23,15 @@ import com.facebook.login.widget.LoginButton;
 
 import junit.framework.Test;
 
+import java.sql.Time;
+
 /**
- * A placeholder fragment containing a simple view.
+ * Facebook login fragment
  */
 public class FacebookFragment extends Fragment {
 
     private CallbackManager callbackmanager;
-    private TextView welcomeMessage;
+    private String name;
 
 
     private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
@@ -39,7 +41,8 @@ public class FacebookFragment extends Fragment {
             Profile profile = Profile.getCurrentProfile();
             if (profile != null)
             {
-                welcomeMessage.setText("Time To Spin the Wheel" + profile.getFirstName()+"!");
+
+
             }
 
         }
@@ -52,6 +55,7 @@ public class FacebookFragment extends Fragment {
 
         @Override
         public void onError(FacebookException error) {
+
 
         }
     };
@@ -76,7 +80,7 @@ public class FacebookFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         LoginButton loginButton = (LoginButton) view.findViewById(R.id.facebook_login_button);
-        loginButton.setReadPermissions("publish_actions");
+        loginButton.setReadPermissions("user_friends");
         loginButton.setFragment(this);
         loginButton.registerCallback(callbackmanager,mCallback);
 

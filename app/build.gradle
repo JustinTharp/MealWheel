@@ -9,7 +9,6 @@ android {
         mavenCentral()
     }
 
-
     defaultConfig {
         applicationId "com.example.justin.mealwheel"
         minSdkVersion 15
@@ -37,4 +36,7 @@ dependencies {
     compile 'com.android.support:design:25.0.0'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     testCompile 'junit:junit:4.12'
+
 }
+
+
