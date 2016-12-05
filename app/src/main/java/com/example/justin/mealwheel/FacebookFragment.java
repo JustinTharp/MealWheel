@@ -31,8 +31,6 @@ import java.sql.Time;
 public class FacebookFragment extends Fragment {
 
     private CallbackManager callbackmanager;
-    private String name;
-    private String address;
 
     private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
         @Override
