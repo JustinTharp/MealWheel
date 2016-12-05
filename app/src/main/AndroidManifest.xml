@@ -16,13 +16,23 @@
 
         <activity
             android:name=".SplashScreen"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+
+
+
+        <activity
+            android:name=".MealWheel"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -40,7 +50,7 @@
                 <data android:scheme="@string/facebook_app_id" />
             </intent-filter>
         </activity>
-        <activity android:name=".MealWheel"></activity>
+
     </application>
 
 </manifest>
